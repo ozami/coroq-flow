@@ -4,32 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "710e300699fedff83a755ca14d527a1a",
+    "content-hash": "2f70f16a272a9767dd24a5afe1fd383c",
     "packages": [
         {
             "name": "coroq/callable-reflector",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coroq-com/callable-reflector.git",
-                "reference": "065be8f7a346d28649f1a5248260d65fdd02952e"
+                "reference": "f6d61d71a8275762120c536359d92b8e46c5c8ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coroq-com/callable-reflector/zipball/065be8f7a346d28649f1a5248260d65fdd02952e",
-                "reference": "065be8f7a346d28649f1a5248260d65fdd02952e",
+                "url": "https://api.github.com/repos/coroq-com/callable-reflector/zipball/f6d61d71a8275762120c536359d92b8e46c5c8ee",
+                "reference": "f6d61d71a8275762120c536359d92b8e46c5c8ee",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Coroq\\CallableReflector\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -40,10 +43,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/coroq-com/callable-reflector/tree/main",
-                "issues": "https://github.com/coroq-com/callable-reflector/issues"
+                "issues": "https://github.com/coroq-com/callable-reflector/issues",
+                "source": "https://github.com/coroq-com/callable-reflector/tree/v1.0.0"
             },
-            "time": "2023-04-15T01:50:23+00:00"
+            "time": "2023-04-15T14:20:40+00:00"
         },
         {
             "name": "psr/container",
@@ -1578,9 +1581,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "coroq/callable-reflector": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

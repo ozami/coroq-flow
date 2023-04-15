@@ -11,7 +11,7 @@
     "require": {
         "php": ">=7.2",
         "psr/container": "^1.0||^2.0",
-        "coroq/callable-reflector": "dev-main"
+        "coroq/callable-reflector": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5",
@@ -22,12 +22,6 @@
             "Coroq\\Flow\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/coroq-com/callable-reflector.git"
-        }
-    ],
     "scripts": {
         "test": "@php vendor/bin/phpunit -c .",
         "phpstan": "@php vendor/bin/phpstan.phar analyse --level 8 src"
