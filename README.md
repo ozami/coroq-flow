@@ -157,7 +157,7 @@ Flow offers a convenient way to integrate a DI Container by fetching default val
 
 ```php
 use Coroq\Flow\Flow;
-use Coroq\Flow\DefaultValueProvider\Psr11Container;
+use Coroq\Flow\DefaultValueProvider\Psr11ContainerAdapter;
 
 // Set up a DI container implementing the PSR-11 ContainerInterface, and add some dependencies
 $diContainer = new SomeDiContainer();
@@ -170,7 +170,7 @@ $step = function(UserRepositoryInterface $userRepository) {
 
 $flow = new Flow([$step]);
 // Set the container as the default value provider
-$flow->setDefaultValueProvider(new Psr11Container($diContainer));
+$flow->setDefaultValueProvider(new Psr11ContainerAdapter($diContainer));
 $result = $flow();
 ```
 

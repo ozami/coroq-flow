@@ -4,7 +4,7 @@ namespace Coroq\Flow\DefaultValueProvider;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 
-class Psr11Container implements DefaultValueProviderInterface {
+class Psr11ContainerAdapter implements DefaultValueProviderInterface {
   /** @var ContainerInterface */
   private $container;
 

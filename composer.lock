@@ -4,8 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39202a3132737331986e99b3beda2b13",
+    "content-hash": "710e300699fedff83a755ca14d527a1a",
     "packages": [
+        {
+            "name": "coroq/callable-reflector",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coroq-com/callable-reflector.git",
+                "reference": "065be8f7a346d28649f1a5248260d65fdd02952e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coroq-com/callable-reflector/zipball/065be8f7a346d28649f1a5248260d65fdd02952e",
+                "reference": "065be8f7a346d28649f1a5248260d65fdd02952e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Coroq\\CallableReflector\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ozawa Masayuki",
+                    "email": "ozawa@coroq.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/coroq-com/callable-reflector/tree/main",
+                "issues": "https://github.com/coroq-com/callable-reflector/issues"
+            },
+            "time": "2023-04-15T01:50:23+00:00"
+        },
         {
             "name": "psr/container",
             "version": "2.0.1",
@@ -1539,7 +1578,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "coroq/callable-reflector": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

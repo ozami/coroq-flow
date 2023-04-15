@@ -3,6 +3,7 @@ declare(strict_types=1);
 namespace Coroq\Flow;
 
 use Coroq\Flow\DefaultValueProvider\DefaultValueProviderInterface;
+use Coroq\CallableReflector\CallableReflector;
 use DomainException;
 use LogicException;
 use ReflectionFunctionAbstract;
@@ -159,7 +160,7 @@ class Flow {
    * @param callable $callable The non-Flow step to be executed
    */
   private function applyNonFlowStep(callable $callable): void {
-    $reflection = ReflectionCallable::createFromCallable($callable);
+    $reflection = CallableReflector::createFromCallable($callable);
     $namedArguments = $this->makeNamedArguments($reflection);
     $result = call_user_func_array($callable, $namedArguments);
     $this->validateResult($result, $reflection);
