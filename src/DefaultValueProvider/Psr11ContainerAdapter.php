@@ -2,7 +2,6 @@
 namespace Coroq\Flow\DefaultValueProvider;
 
 use Psr\Container\ContainerInterface;
-use Psr\Container\NotFoundExceptionInterface;
 
 class Psr11ContainerAdapter implements DefaultValueProviderInterface {
   /** @var ContainerInterface */
@@ -16,11 +15,6 @@ class Psr11ContainerAdapter implements DefaultValueProviderInterface {
    * @return mixed
    */
   public function getValue(string $name) {
-    try {
-      return $this->container->get($name);
-    }
-    catch (NotFoundExceptionInterface $exception) {
-      return null;
-    }
+    return $this->container->get($name);
   }
 }

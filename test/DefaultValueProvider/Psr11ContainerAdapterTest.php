@@ -16,13 +16,14 @@ class Psr11ContainerAdapterTest extends TestCase {
     $this->assertSame('the value', $provider->getValue('itemId'));
   }
 
-  public function testGetValueReturnsNullIfTheItemDoesNotExist() {
+  public function testGetValueThrowExceptionIfTheItemDoesNotExist() {
+    $this->expectException(NotFoundExceptionInterface::class);
     $container = $this->createMock(ContainerInterface::class);
     $container->method('get')
       ->with($this->equalTo('itemId'))
       ->will($this->throwException(new SampleNotFoundException()));
     $provider = new Psr11ContainerAdapter($container);
-    $this->assertNull($provider->getValue('itemId'));
+    $provider->getValue('itemId');
   }
 }
 
